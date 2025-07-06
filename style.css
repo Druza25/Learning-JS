@@ -1,0 +1,86 @@
+/* style.css */
+
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Calculator table styling */
+table {
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Input display styling */
+input#inputBox {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 10px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Table cells (buttons) */
+td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect for buttons */
+td:hover {
+    background-color: #e2e2e2;
+}
+
+/* Special styling for operator buttons */
+td:nth-child(4), /* last column */
+td[colspan="4"] { /* equal button */
+    background-color: #f39c12;
+    color: white;
+    font-weight: bold;
+}
+
+td:nth-child(4):hover,
+td[colspan="4"]:hover {
+    background-color: #d78e0a;
+}
+
+/* AC button styling */
+td:nth-last-child(2) {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}
+
+td:nth-last-child(2):hover {
+    background-color: #c0392b;
+}
+
+/* Zero button spans two columns */
+td[colspan="2"] {
+    width: 120px;
+}
+
+/* Disable text selection on input */
+input#inputBox {
+    user-select: none;
+}
